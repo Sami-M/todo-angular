@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/bootstrap/bootstrap-theme.min.css">
+  <style>
+    input[type='checkbox'] {
+      /*-webkit-appearance:none;*/
+      width:30px;
+      height:30px;
+      background:white;
+      linear-gradient(to bottom,#5cb85c 0,#419641 100%)
+      /*border-radius:5px;*/
+      /*border:2px solid #555;*/
+    }
+    input[type='checkbox']:checked {
+      linear-gradient(to bottom,#d9534f 0,#c12e2a 100%)
+      /*background: #abd;*/
+    }
+  </style>
+</head>
+<body class="container" ng-app="todo">
+
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation" class="active"><a href="#/">Home</a></li>
+      <li role="presentation"><a href="/#about">About</a></li>
+    </ul>
+  </nav>
+  <h3 class="text-muted">To Do</h3>
+</div>
+<div ui-view=""></div>
+
+<script src="libs/angular/angular.js"></script>
+<script src="libs/ui-router/angular-ui-router.js"></script>
+<script src="libs/ngstorage/ngStorage.js"></script>
+<!--Jquery is needed for boostrap.js-->
+<script src="libs/jquery/jquery.js"></script>
+<script src="libs/bootstrap/bootstrap.js"></script>
+<script src="dist/app.js"></script>
+</body>
+</html>

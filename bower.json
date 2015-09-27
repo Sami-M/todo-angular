@@ -1,0 +1,22 @@
+{
+  "name": "todo-angular",
+  "version": "0.0.0",
+  "authors": [
+    "Sami-M <sami.mirimiri@live.com>"
+  ],
+  "main": "Gruntfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "ui-router": "~0.2.15",
+    "ngstorage": "~0.3.9",
+    "bootstrap": "~3.3.5"
+  }
+}

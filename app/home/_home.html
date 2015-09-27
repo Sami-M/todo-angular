@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to To Do!</h1>
+    <p>This web application written in AngularJS will help you manage your daily to-do list</p>
+  </div>
+</div>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="todo in todos">
+    <div class="row">
+      <div class="col-xs-3">
+        <strike ng-if="todo.done">{{todo.name}}</strike>
+        <span ng-if="!todo.done">{{todo.name}}</span>
+      </div>
+      <div class="col-xs-3">
+        <span ng-if="todo.dateCreated">{{todo.dateCreated | date:'dd-MMM-yyyy H:mm'}}</span>
+      </div>
+      <div class="col-xs-3">
+        <span><input type="checkbox" ng-checked="todo.done" ng-click="thingsChanged(todo)"/></span>
+      </div>
+      <div class="col-xs-3">
+        <span><button class="btn btn-danger pull-right" ng-click="deleteTodo(todo)"><i class="glyphicon glyphicon-remove"></i></button></span>
+      </div>
+    </div>
+
+
+    <br>
+  </li>
+
+  <br>
+  <form ng-submit="addTodo(newTodo)" class="row">
+    <div class="col-xs-11">
+      <input type="text" class="form-control" ng-model="newTodo"/>
+    </div>
+    <div class="col-xs-1">
+      <button type="submit" class="btn btn-success" ng-disabled="!newTodo"><i class="glyphicon glyphicon-plus"></i></i></button>
+    </div>
+  </form>
+</ul>
